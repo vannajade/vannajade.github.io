@@ -20,7 +20,7 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="taskodile">
+  <meta name="apple-mobile-web-app-title" content="Taskodile">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <title>taskodile</title>
@@ -30,8 +30,28 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+
   <script>
-    var serviceWorkerVersion = '1389780789';
+    // Your web app's Firebase configuration
+    // TODO ADD YOUR FIREBASE CONFIG
+    var firebaseConfig = {
+      apiKey: 'AIzaSyAUqaTqrG3WQWE4gb1bFhUvexlNYJa0vnE',
+      authDomain: 'taskodile.firebaseapp.com',
+      projectId: 'taskodile',
+      storageBucket: 'taskodile.appspot.com',
+      messagingSenderId: '33227340612',
+      appId: '1:33227340612:web:9af924597f169a62173511',
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script>
+    var serviceWorkerVersion = '2844221269';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -94,5 +114,7 @@
       loadMainDartJs();
     }
   </script>
+
+
 </body>
 </html>
